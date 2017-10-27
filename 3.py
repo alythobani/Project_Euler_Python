@@ -18,10 +18,6 @@ def is_prime(n):
     return True
 
 
-for x in range(2, 20):
-    print('is_prime(%d): %s' % (x, is_prime(x)))
-
-
 def get_prime_factors(n):
     """
     Retrieves a set of prime factors of n
@@ -40,7 +36,7 @@ def get_prime_factors(n):
                 prime_factor_list.add(factor)
             else:
                 prime_factor_list = prime_factor_list | get_prime_factors(
-                    factor) | get_prime_factors(n / factor)
+                    factor)
 
             prime_factor_list = prime_factor_list | get_prime_factors(
                 n / factor)
