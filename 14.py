@@ -1,4 +1,6 @@
 """
+Solution to problem 14 of Project Euler.
+
 The following iterative sequence is defined for the set of positive integers:
 
 n -> n/2 (n is even)
@@ -18,16 +20,8 @@ NOTE: Once the chain starts the terms are allowed to go above one million.
 
 
 def number_of_steps(n):
-    """
-    Returns the number of steps involved until the sequence starting at n
-    reaches 1.
-    """
-
+    """Return the sequence chain length from n to 1."""
     def number_of_steps_helper(n, acc):
-        """
-        Number of steps helper function that takes in an accumulated number of
-        steps
-        """
         if n == 1:
             return acc + 1
 
@@ -40,11 +34,8 @@ def number_of_steps(n):
     return number_of_steps_helper(n, 0)
 
 
-def longest_chain_under_n(n):
-    """
-    Returns the starting number under n that produces the longest chain.
-    """
-
+def longest_chain_under_n_starting_number(n):
+    """Return the starting number under n that produces the longest chain."""
     longest_chain = 0
     longest_chain_starting_number = None
 
@@ -60,4 +51,4 @@ def longest_chain_under_n(n):
     return longest_chain_starting_number
 
 
-print(longest_chain_under_n(1000000))
+print(longest_chain_under_n_starting_number(1000000))
