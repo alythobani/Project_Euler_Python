@@ -22,17 +22,17 @@ def is_1_to_9_pandigital(number_str):
     """
     Return True if each digit 1 to 9 is found once in number_str, else False.
 
-    >>> is_1_to_9_pandigital(99, 34, 3366)
+    >>> is_1_to_9_pandigital('99343366')
     False
-    >>> is_1_to_9_pandigital(12, 34, 408)
+    >>> is_1_to_9_pandigital('1234408')
     False
-    >>> is_1_to_9_pandigital(12, 34, 5678)
+    >>> is_1_to_9_pandigital('12345678')
     False
-    >>> is_1_to_9_pandigital(12, 345, 67899)
+    >>> is_1_to_9_pandigital('1234567899')
     False
-    >>> is_1_to_9_pandigital(39, 186, 7254)
+    >>> is_1_to_9_pandigital('391867254')
     True
-    >>> is_1_to_9_pandigital(12, 345, 6789)
+    >>> is_1_to_9_pandigital('123456789')
     True
     """
     if len(number_str) != 9:  # We need exactly 9 digits
